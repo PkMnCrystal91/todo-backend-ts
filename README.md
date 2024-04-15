@@ -5,11 +5,10 @@
 ```
 1. npm i tslint --save-dev
 2. npm i typescript --save-dev
-4. dist
-5. node dist
-6. npm i express cors dotenv
-7. npm i --save-dev @types/express
-8. npm i --save-dev @types/cors
+3. tsc
+4. npm i express cors dotenv
+5. npm i --save-dev @types/express
+6. npm i --save-dev @types/cors
 
 ```
 
