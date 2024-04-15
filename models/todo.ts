@@ -7,7 +7,7 @@ const Todo = db.define("tasks", {
   },
   completado: {
     type: DataTypes.BOOLEAN,
-    defaultValue: false,
+    defaultValue: false, // ingreso por defecto en falso
   },
 });
 

@@ -2,12 +2,14 @@ import { Request, Response } from "express";
 import { json } from "sequelize/types";
 import Todo from "../models/todo";
 
+// Obtener todos las tareas
 export const getTodos = async (req: Request, res: Response) => {
   const todos = await Todo.findAll();
 
   res.json({ todos });
 };
 
+// obtener una tarea por su id
 export const getTodo = async (req: Request, res: Response) => {
   const { id } = req.params;
 
@@ -22,6 +24,7 @@ export const getTodo = async (req: Request, res: Response) => {
   }
 };
 
+// Crear tarea
 export const postTodo = async (req: Request, res: Response) => {
   const { body } = req;
 
@@ -40,6 +43,7 @@ export const postTodo = async (req: Request, res: Response) => {
   }
 };
 
+// Actualizar el estado de la tarea icompleta a completa
 export const putTodoToggle = async (req: Request, res: Response) => {
   const { id } = req.params;
 
@@ -55,6 +59,7 @@ export const putTodoToggle = async (req: Request, res: Response) => {
   res.json(task);
 };
 
+// Eliminar tarea
 export const deleteTodo = async (req: Request, res: Response) => {
   const { id } = req.params;
 
